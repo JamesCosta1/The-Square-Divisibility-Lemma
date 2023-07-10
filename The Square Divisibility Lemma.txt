@@ -1,0 +1,25 @@
+\documentclass{article}
+    \title{The Square Divisibility Lemma}
+    \usepackage{amsthm,amssymb}
+    \renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+    \begin{document}
+        \author{James Costa}
+        \date{}
+        \maketitle
+        \begin{proof}
+            For any integer $n$, if $n^2$ is divisible by $2$, then $n$ is divisible by $2$. \newline
+            (i.e. For any $n \in \mathbb{Z}$, if $2 \mid n^2$, then $2 \mid n$).
+            \bigbreak
+            Let $n \in \mathbb{Z}$ be arbitrary. Suppose by way of contradiction that $n^2$ is divisible by $2$ but $n$ is not divisible by $2$ (i.e. $2 \mid n^2$ and $2 \nmid n$). By The Division Algorithm, $n$ is either even or odd (i.e. $n=2q+r$ for some unique $q$, $r \in \mathbb{Z}$, where $0 \le r < 2$). It will be demonstrated, in either case, that a contradiction occurs.
+            \bigbreak
+            \underline{Case 1 ($r=0$ meaning $n$ is even):} \newline
+            By definition of even, $n=2q$ for some $q \in \mathbb{Z}$. So, $2 \mid n$, which contradicts the assumption that $2 \nmid n$.
+            \bigbreak
+            \underline{Case 2 ($r=1$ meaning $n$ is odd):} \newline
+            By definition of odd, $n=2q+1$ for some $q \in \mathbb{Z}$. By the distributive property, $n^2=(2q+1)^2=(2q+1)(2q+1)=4q^2+4q+1$. Factoring out $2$ from the first two terms yields $n^2=2(2q^2+2q)+1$. Because $q \in \mathbb{Z}$, we have that $(2q^2+2q) \in \mathbb{Z}$. Since $n^2$ is odd, $2 \nmid n^2$. This contradicts the assumption that $2 \mid n^2$.
+            \bigbreak
+            \bigbreak
+            In both cases we yield a contradiction, meaning that our assumption that if $n \in \mathbb{Z}$, then $2 \mid n^2$ and $2 \nmid n$ is false. Therefore, if $n^2$ is divisible by $2$, then $n$ is divisible by $2$ for any integer $n$.
+
+        \end{proof}
+    \end{document}
